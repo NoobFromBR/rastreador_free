@@ -1,6 +1,7 @@
 
 import folium
 from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QLineEdit, QPushButton, QListWidget
+from PyQt5.QtCore import QUrl
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 import sys
 import re
@@ -52,7 +53,7 @@ class MapaRastreamento(QWidget):
         for nome, (lat, lng) in self.veiculos.items():
             folium.Marker([lat, lng], popup=nome).add_to(self.map)
         self.salvar_mapa()
-        self.view.load(f"file://{os.path.abspath(MAP_FILE)}")
+        self.view.load(QUrl.fromLocalFile(os.path.abspath(MAP_FILE)))
         self.lista_veiculos.clear()
         self.lista_veiculos.addItems(self.veiculos.keys())
 

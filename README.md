@@ -1,4 +1,3 @@
-
 # Rastreador de Veículos (Desktop - Python + OpenStreetMap)
 
 Este é um aplicativo desktop feito em Python para rastrear veículos em tempo real, usando **links de localização enviados pelo WhatsApp** e exibindo tudo em um **mapa interativo gratuito (OpenStreetMap via Folium)**.

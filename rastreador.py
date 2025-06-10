@@ -29,7 +29,7 @@ class MapaRastreamento(QWidget):
 
         self.map = folium.Map(location=[-15.7797, -47.9297], zoom_start=4)
         self.salvar_mapa()
-        self.view.load(f"file://{os.path.abspath(MAP_FILE)}")
+        self.view.load(QUrl.fromLocalFile(os.path.abspath(MAP_FILE)))
 
         layout.addWidget(self.input_link)
         layout.addWidget(self.input_nome)
